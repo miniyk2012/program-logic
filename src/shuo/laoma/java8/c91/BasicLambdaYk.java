@@ -5,6 +5,7 @@ import org.msgpack.core.annotations.VisibleForTesting;
 import shuo.laoma.basic.c11.Array;
 import java.io.File;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -28,7 +29,7 @@ public class BasicLambdaYk {
 		File[] files = f.listFiles((dir, name) -> name.endsWith(".java"));
         System.out.println(Arrays.toString(files));
 		
-		Arrays.sort(files);
+		Arrays.sort(files, (f1, f2) -> f1.getName().compareTo(f2.getName()));
         System.out.println(Arrays.toString(files));
 
 		ExecutorService executor = Executors.newFixedThreadPool(100);
@@ -49,6 +50,14 @@ public class BasicLambdaYk {
         String msg = "hello world";
         ExecutorService executor = Executors.newFixedThreadPool(100);
         executor.submit(()->System.out.println(msg));
+    }
+
+    @Test
+    public void testLambda2() {
+        File f = new File("/Users/thomas_young/Documents/code/program-logic/src/shuo/laoma/java8/c91");
+        File[] files = f.listFiles((dir, name) -> name.endsWith(".java"));
+        Arrays.sort(files, Comparator.comparing(file->file.getName()));
+        Arrays.sort(files, Comparator.comparing(File::getName));
     }
 
 

@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -128,6 +129,19 @@ public class ListUtilYk {
         System.out.println(Arrays.toString(collegeNames.toArray()));
 
     }
+
+    @Test
+	public void testComparator() {
+		List<Student> students = Arrays.asList(new Student[] {
+				new Student("zhangsan", 89d),
+				new Student("lisi", 89d),
+				new Student("wangwu", 98d) });
+		students.sort(Comparator.comparing(Student::getScore)
+				.reversed()
+				.thenComparing(Student::getName));
+		System.out.println(Arrays.toString(students.toArray()));
+
+	}
 
 
 }
