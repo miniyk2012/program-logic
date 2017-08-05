@@ -1,6 +1,7 @@
 package shuo.laoma.java8.c92;
 
 import org.junit.Test;
+import shuo.laoma.basic.c11.Array;
 
 import java.io.File;
 import java.util.*;
@@ -205,43 +206,52 @@ public class StreamDemoYk {
 	@Test
 	public void max(){
 		Student student = students.stream()
+//				.filter(s->s.getScore()>100)
 		        .max(Comparator.comparing(Student::getScore).reversed())
-		        .get();
+		        .orElse(null);
+		System.out.println(student);
 	}
-	
-	public static void count(){
+
+	@Test
+	public void count(){
 		long above90Count = students.stream()
 		        .filter(t->t.getScore()>90)
 		        .count();
+		System.out.println(above90Count);
 	}
-	
-	public static void allMatch(){
+
+	@Test
+	public void allMatch(){
 		boolean allPass = students.stream()
 		        .allMatch(t->t.getScore()>=60);
+		System.out.println(allPass);
 	}
-	
-	public static void findAny(){
-		Optional<Student> student = students.stream()
+
+	@Test
+	public void findAny(){
+		String name = students.stream()
 		        .filter(t->t.getScore()<60)
-		        .findAny();
-		if(student.isPresent()){
-		    // 不及格的学生....
-		}
+		        .findAny().orElseGet(()->new Student("invalid", 0)).getName();
+		System.out.println(name);
 	}
-	
-	public static void forEach(){
+
+	@Test
+	public void forEach(){
 		students.stream()
 	        .filter(t->t.getScore()>90)
 	        .forEach(System.out::println);
 	}
-	
-	public static void toArray(){
+
+	@Test
+	public void toArray(){
 		Student[] above90Arr = students.stream()
 		        .filter(t->t.getScore()>90)
-		        .toArray(Student[]::new);
+		        .toArray(Student[]::new);  // 这个产生的student是和students里面的原始对象，并没有新建一个，这里Student[]::new只是给出了类型
+		System.out.println(Arrays.asList(above90Arr));
 	}
 	
-	public static void reduceForTopStudent(){
+	@Test
+	public void reduceForTopStudent(){
 		Student topStudent = students.stream().reduce((accu, t) -> {
 		    if (accu.getScore() >= t.getScore()) {
 		        return accu;
@@ -249,37 +259,61 @@ public class StreamDemoYk {
 		        return t;
 		    }
 		}).get();
+		System.out.println(topStudent);
+
+		topStudent = students.stream().max(
+					Comparator.comparing(Student::getScore)
+					.thenComparing(Comparator.comparing(Student::getName)).reversed())
+				.orElse(null);
+		System.out.println(topStudent);
 	}
-	
-	public static void reduceForSumScore(){
+
+	@Test
+	public void reduceForSumScore(){
 		double sumScore = students.stream().reduce(0d,
 		        (sum, t) -> sum += t.getScore(),
-		        (sum1, sum2) -> sum1 += sum2
+		        (sum1, sum2) -> sum1 += sum2   // 不知道combiner有什么用
 		    );
+		System.out.println(sumScore);
+
+		sumScore = students.stream().mapToDouble(Student::getScore).sum();
+		System.out.println(sumScore);
 	}
 	
-	public static void array2stream(){
+	@Test
+	public void array2stream(){
 		File[] files = new File(".").listFiles();
 		Arrays.stream(files)
-		    .filter(File::isFile)    
+		    .filter(File::isFile)
 		    .map(File::getName)
 		    .forEach(System.out::println);
 	}
-	
-	public static void randomNum(){
+
+	@Test
+	public void randomNum(){
 		Stream.generate(()->Math.random())
 		    .limit(10)
 		    .forEach(System.out::println);
+
+		Stream<Long> natural = Stream.generate(new NaturalSupplier());
+		natural.map((x) -> x * x).limit(10).forEach(System.out::println);
+
+		// 生成斐波那契数列的第21-30项
+		Stream<Long> fibonacci = Stream.generate(new FibonacciSupplier());
+		List<Long> list = fibonacci.skip(20).limit(10).collect(Collectors.toList());
+		System.out.println(list);
+
+		// 计算pi，π/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9 - ...
+		Stream<Double> piStream = Stream.generate(new PiSupplier());
+		System.out.println(piStream.skip(1000).limit(10).findFirst().orElse(0d));
 	}
-	
-	public static void oddNums(){
+
+	@Test
+	public void oddNums(){
 		Stream.iterate(1, t->t+2)
-		    .limit(100)
-		    .forEach(System.out::println);
-	}
-	
-	public static void main(String[] args) {
-		oddNums();
+				.limit(100)
+				.filter(n->n<10)
+				.forEach(System.out::println);
 	}
 
 }
