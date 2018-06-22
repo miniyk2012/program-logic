@@ -50,7 +50,7 @@ public class Point {
 		System.out.println(p1.getX()+","+p1.getY()+","+p1.distance());	
 	
 		Point p2 = new Point(4,5);
-		System.out.println(p2.getX()+","+p2.getY()+", "+p2.distance());
+		System.out.println(p2);
 	}
 }
 

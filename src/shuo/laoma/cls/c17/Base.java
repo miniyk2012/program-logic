@@ -2,7 +2,7 @@ package shuo.laoma.cls.c17;
 
 public class Base {
 	public static int s;
-	private int a;
+	public int a;
 	
 	static {
 		System.out.println("基类静态代码块, s: "+s);

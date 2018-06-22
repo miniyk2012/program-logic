@@ -2,7 +2,7 @@ package shuo.laoma.cls.c17;
 
 public class Child extends Base {
 	public static int s;
-	private int a;
+	public int a;
 	
 	static {
 		System.out.println("子类静态代码块, s: "+s);
@@ -20,7 +20,7 @@ public class Child extends Base {
 	}
 	
 	protected void step(){
-		System.out.println("child s: " + s +", a: "+a);
+		System.out.println("child s: " + s +", a: "+ a);
 	}
 }
 

@@ -15,5 +15,7 @@ public class Test {
 		
 		System.out.println("\n---- b.s: " + b.s); 
 		System.out.println("\n---- c.s: " + c.s); 
+		System.out.println("\n---- b.a: " + b.a);
+		System.out.println("\n---- c.a: " + c.a);
 	}
 }
