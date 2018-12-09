@@ -112,7 +112,7 @@ public class CGLibContainer {
 				for (Method m : exceptionMethods) {
 					m.invoke(null, new Object[] { object, method, args, e });
 				}
-				throw e;
+				 throw e;
 			}
 		}
 	}

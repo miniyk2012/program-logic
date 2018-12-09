@@ -15,5 +15,8 @@ public class ServiceA {
 		return b;
 	}
 	
-	
+	public String sayHello() throws RuntimeException {
+		System.out.println("hellow, world!");
+		return "this is result";
+	}
 }

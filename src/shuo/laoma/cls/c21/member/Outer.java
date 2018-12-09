@@ -7,6 +7,7 @@ public class Outer {
         public void innerMethod(){
             System.out.println("outer a " +a);
             Outer.this.action();
+            action();
         }
     }
     
@@ -17,5 +18,9 @@ public class Outer {
     public void test(){
         Inner inner = new Inner();
         inner.innerMethod();
+    }
+
+    public static void main(String[] args) {
+        new Outer().test();
     }
 }
