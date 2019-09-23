@@ -1,4 +1,4 @@
-package headfirst.strategy;
+package headfirst.designpatterns.strategy;
 
 @FunctionalInterface
 public interface FlyBehavior {
