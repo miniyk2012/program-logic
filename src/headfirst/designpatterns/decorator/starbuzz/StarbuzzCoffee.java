@@ -1,6 +1,6 @@
-package headfirst.designpatterns.decorator;
+package headfirst.designpatterns.decorator.starbuzz;
 
-import headfirst.designpatterns.decorator.Beverage.Size;
+import headfirst.designpatterns.decorator.starbuzz.Beverage.Size;
 
 public class StarbuzzCoffee {
     public static void main(String[] args) {

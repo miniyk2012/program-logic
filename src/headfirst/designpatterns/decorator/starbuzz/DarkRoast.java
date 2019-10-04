@@ -1,4 +1,4 @@
-package headfirst.designpatterns.decorator;
+package headfirst.designpatterns.decorator.starbuzz;
 
 public class DarkRoast extends Beverage {
     public DarkRoast() {

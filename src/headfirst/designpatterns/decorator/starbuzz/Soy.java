@@ -1,4 +1,7 @@
-package headfirst.designpatterns.decorator;
+package headfirst.designpatterns.decorator.starbuzz;
+
+import headfirst.designpatterns.decorator.starbuzz.Beverage;
+import headfirst.designpatterns.decorator.starbuzz.CondimentDecorator;
 
 public class Soy extends CondimentDecorator {
 
