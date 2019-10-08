@@ -1,4 +1,4 @@
-package headfirst.designpatterns.factory.simple_factory;
+package headfirst.designpatterns.factory.factory_method;
 
 import java.util.ArrayList;
 
