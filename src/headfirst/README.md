@@ -7,6 +7,7 @@ factory/ 工厂模式
 singleton/ 单例模式
 facade/ 外观模式
 adapter/ 适配器模式
+filters/ 责任链
 
 
 
