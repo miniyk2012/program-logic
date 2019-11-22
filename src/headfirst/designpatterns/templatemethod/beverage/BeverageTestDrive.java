@@ -18,7 +18,5 @@ public class BeverageTestDrive {
         CaffeineBeverageWithHook teaWithHook = new TeaWithHook();
         System.out.println("\nMaking tea with hook...");
         teaWithHook.prepareRecipe();
-
-
     }
 }
