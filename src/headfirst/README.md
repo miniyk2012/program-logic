@@ -9,6 +9,7 @@ facade/ 外观模式
 adapter/ 适配器模式
 filters/ 责任链
 templatemethod/ 模板方法
+iterator/ 迭代器模式
 
 
 
