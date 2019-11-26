@@ -8,7 +8,7 @@ public class PancakeHouseMenu implements Menu {
 
     public PancakeHouseMenu() {
         menuItems = new ArrayList<>();
-
+        menuItems.iterator();
         addItem("K&B's Pancake Breakfast",
                 "Pancakes with scrambled eggs, and toast",
                 true,
