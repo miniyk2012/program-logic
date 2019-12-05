@@ -13,6 +13,7 @@ public class Main {
         FilterChain filterChain = new FilterChain();
         filterChain.addFilter(new HTMLFilter())
                 .addFilter(new SensitiveFilter()) //前面返回this,在此提供了方便
+                .addFilter(new BreakFilter())
                 .addFilter(new FaceFilter());
 
         String ret = filterChain.doFilter(request, response, filterChain);
