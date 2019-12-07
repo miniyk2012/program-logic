@@ -2,7 +2,7 @@ package headfirst.designpatterns.filters;
 
 public class Main {
     public static void main(String[] args) {
-        String msg =":):,<script>,敏感,被就业,网络授课";
+        String msg = ":):,<script>,敏感,被就业,网络授课";
 
         Request request = new Request();
         request.setRequest(msg);

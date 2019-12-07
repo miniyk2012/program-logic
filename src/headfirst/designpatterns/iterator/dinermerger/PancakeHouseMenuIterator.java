@@ -12,8 +12,9 @@ public class PancakeHouseMenuIterator implements Iterator {
 
     @Override
     public boolean hasNext() {
-        if (position >= items.size())
+        if (position >= items.size()) {
             return false;
+        }
         return true;
     }
 
