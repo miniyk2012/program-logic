@@ -31,7 +31,7 @@ public class CompositeIterator implements Iterator<MenuComponent> {
     public MenuComponent next() {
         if (hasNext()) {
             Iterator<MenuComponent> iterator = stack.peek();
-            MenuComponent menuComponent = iterator.next();
+            MenuComponent menuComponent = iterator.next();  // 感觉这里会有递归
             if (menuComponent instanceof Menu) {
                 stack.push(menuComponent.createIterator());
             }
