@@ -10,7 +10,7 @@ adapter/ 适配器模式
 filters/ 责任链
 templatemethod/ 模板方法
 iterator/ 迭代器模式
-combined/ 组合模式
+composite/ 组合模式
 
 
 

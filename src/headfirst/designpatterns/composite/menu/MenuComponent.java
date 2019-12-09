@@ -1,4 +1,4 @@
-package headfirst.designpatterns.combined.menu;
+package headfirst.designpatterns.composite.menu;
 
 public abstract class MenuComponent {
     public void add(MenuComponent menuComponent) {

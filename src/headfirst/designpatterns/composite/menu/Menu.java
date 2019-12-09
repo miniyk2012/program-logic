@@ -1,7 +1,6 @@
-package headfirst.designpatterns.combined.menu;
+package headfirst.designpatterns.composite.menu;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class Menu extends MenuComponent {

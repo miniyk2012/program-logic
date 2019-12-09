@@ -1,4 +1,4 @@
-package headfirst.designpatterns.combined.menu;
+package headfirst.designpatterns.composite.menu;
 
 public class MenuTestDriver {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class MenuTestDriver {
                 new Menu("DESSERT MENU", "Dessert of course!");
         MenuComponent coffeeMenu = new Menu("COFFEE MENU", "Stuff to go with your afternoon coffee");
 
-        MenuComponent allMenus = new Menu("ALL MENUS", "All menus combined");
+        MenuComponent allMenus = new Menu("ALL MENUS", "All menus composite");
 
         allMenus.add(pancakeHouseMenu);
         allMenus.add(dinerMenu);

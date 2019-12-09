@@ -1,4 +1,4 @@
-package headfirst.designpatterns.combined.menu;
+package headfirst.designpatterns.composite.menu;
 
 public class MenuItem extends MenuComponent {
     String name;
