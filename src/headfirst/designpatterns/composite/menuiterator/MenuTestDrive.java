@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class MenuTestDrive {
     public static void main(String[] args) {
-//        printVeges();
+        printVeges();
         System.out.println();
         printPreOrder();
     }
@@ -148,21 +148,29 @@ public class MenuTestDrive {
         MenuComponent g = new MenuItem("G", "g", false, 0);
         MenuComponent h = new MenuItem("H", "h", false, 0);
 
+        MenuComponent i = new Menu("I", "i");
+
+
+//        a.add(b);
+//        a.add(c);
+//        b.add(d);
+//        b.add(e);
+//        e.add(f);
+//        e.add(g);
+//        e.add(h);
+
         a.add(b);
-        a.add(c);
-        b.add(d);
         b.add(e);
-        e.add(f);
-        e.add(g);
-        e.add(h);
+        e.add(i);
+        i.add(f);
 
         Iterator<MenuComponent> iterator = a.createIterator();
         while (iterator.hasNext()) {
             MenuComponent menuComponent = iterator.next();
             System.out.println(menuComponent.getName());
         }
-//        System.out.println();
-//        a.print();
+        System.out.println();
+        a.print();
 
         System.out.println();
         iterator = a.createIterator();
