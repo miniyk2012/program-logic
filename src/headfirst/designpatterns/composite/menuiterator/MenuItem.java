@@ -1,10 +1,13 @@
-package headfirst.designpatterns.composite.menu;
+package headfirst.designpatterns.composite.menuiterator;
+
+import java.util.Iterator;
 
 public class MenuItem extends MenuComponent {
     private String name;
     private String description;
     private boolean vegetarian;
     private double price;
+
 
     public MenuItem(String name, String description, boolean vegetarian, double price) {
         this.name = name;
@@ -43,4 +46,8 @@ public class MenuItem extends MenuComponent {
         System.out.println("     -- " + getDescription());
     }
 
+    @Override
+    public Iterator<MenuComponent> createIterator() {
+        return new NullIterator();
+    }
 }
