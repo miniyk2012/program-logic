@@ -19,6 +19,11 @@ public class SocialSpammer {
             Profile profile = iterator.getNext();
             sendMessage(profile.getEmail(), message);
         }
+        iterator.reset();
+        while (iterator.hasNext()) {
+            Profile profile = iterator.getNext();
+            sendMessage(profile.getEmail(), message);
+        }
     }
 
     public void sendSpamToCoworkers(String profileEmail, String message) {
