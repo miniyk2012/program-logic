@@ -13,6 +13,7 @@ public class GumballMonitorTestDrive {
             GumballMachineRemote machine =
                     (GumballMachineRemote) Naming.lookup(location);
             monitor = new GumballMonitor(machine);
+            // monitor实际上是Stub, Stub实现了GumballMachineRemote: headfirst.designpatterns.proxy.gumball.GumballMachine_Stub
             monitor.report();
         } catch (NotBoundException e) {
             e.printStackTrace();
