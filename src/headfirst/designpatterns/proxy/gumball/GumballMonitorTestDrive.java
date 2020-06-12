@@ -15,6 +15,14 @@ public class GumballMonitorTestDrive {
             monitor = new GumballMonitor(machine);
             // monitor实际上是Stub, Stub实现了GumballMachineRemote: headfirst.designpatterns.proxy.gumball.GumballMachine_Stub
             monitor.report();
+            /**
+             Gumball Machine class: class headfirst.designpatterns.proxy.gumball.GumballMachine_Stub
+             Gumball Machine: santafe.mightygumball.com
+             Current inventory: 3 gumballs
+             Current state: waiting for quarter
+             class headfirst.designpatterns.proxy.gumball.NoQuarterState
+             You turned, but there's no quarter
+             **/
         } catch (NotBoundException e) {
             e.printStackTrace();
         } catch (MalformedURLException e) {
