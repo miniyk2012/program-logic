@@ -1,8 +1,8 @@
 package headfirst.designpatterns.combining;
 
-public class DuckSimulator {
+public class Application {
     public static void main(String[] args) {
-        DuckSimulator simulator = new DuckSimulator();
+        Application simulator = new Application();
         AbstractDuckFactory duckFactory = new CountingDuckFactory();
         simulator.simulate(duckFactory);
     }
