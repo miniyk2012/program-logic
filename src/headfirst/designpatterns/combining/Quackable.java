@@ -1,5 +1,5 @@
 package headfirst.designpatterns.combining;
 
-public interface Quackable {
+public interface Quackable extends QuackObservable {
     void quack();
 }

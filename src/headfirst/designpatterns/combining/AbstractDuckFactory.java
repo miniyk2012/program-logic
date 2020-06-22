@@ -5,4 +5,5 @@ public interface AbstractDuckFactory {
     Quackable createRedheadDuck();
     Quackable createDuckCall();
     Quackable createRubberDuck();
+    Quackable createDecoyDuck();
 }

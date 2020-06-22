@@ -21,4 +21,9 @@ public class CountingDuckFactory implements AbstractDuckFactory {
     public Quackable createRubberDuck() {
         return new QuackCounter(new RubberDuck());
     }
+
+    @Override
+    public Quackable createDecoyDuck() {
+        return new QuackCounter(new DecoyDuck());
+    }
 }
