@@ -30,4 +30,5 @@ public class GooseAdapter implements Quackable {
         observable.notifyObservers();
     }
 
+
 }
