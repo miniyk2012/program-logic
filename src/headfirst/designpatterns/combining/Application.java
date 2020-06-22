@@ -32,7 +32,9 @@ public class Application {
         flockOfDucks.add(flockOfMallar);
 
         Quackologist quackologist = new Quackologist();
+        Woologist woologist = new Woologist();
         flockOfDucks.registerObserver(quackologist);
+        flockOfDucks.registerObserver(woologist);
         simulate(flockOfDucks);
 
         System.out.println("The ducks quacked " +
