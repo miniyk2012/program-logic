@@ -14,7 +14,7 @@ composite/ 组合模式
 state/ 状态模式
 proxy/ 代理模式
 combining/ 复合模式
-
+combined/ MVC
 
 
 
