@@ -1,18 +1,20 @@
 package shuo.laoma.basic.c4.c4_10;
 
-public class Child {
+public class Child implements IAdd {
     private long sum;
-    private Base base;
+    private IAdd base;
 
     public Child() {
         base = new Base();
     }
 
+    @Override
     public void add(int num) {
         base.add(num);
         sum += num;
     }
 
+    @Override
     public void addAll(int[] nums) {
         base.addAll(nums);
         for (int num : nums)
@@ -24,8 +26,8 @@ public class Child {
     }
 
     public static void main(String[] args) {
-        Child c = new Child();
+        IAdd c = new Child();
         c.addAll(new int[]{1, 2, 3});
-        System.out.println(c.getSum());
+        System.out.println(((Child)c).getSum());
     }
 }
