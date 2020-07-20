@@ -4,6 +4,13 @@ public class ExceptionTest {
   
     public static void main(String[] args) {
         if(args.length<1){
+            System.out.println(Integer.valueOf(100).floatValue());
+            System.out.println(Double.valueOf(100).longValue());
+            Character a = Character.valueOf('熙');
+            System.out.println(Character.isHighSurrogate('熙'));
+            System.out.println(Character.toCodePoint((char)0xD891, (char)0xDC10));
+            System.out.println(Character.toChars(214032));
+            Integer.reverse(0x12345678);
             System.out.println("请输入数字");
             return;
         }
