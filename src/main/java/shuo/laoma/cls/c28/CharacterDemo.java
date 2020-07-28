@@ -1,6 +1,5 @@
 package shuo.laoma.cls.c28;
 
-import javax.security.auth.callback.CallbackHandler;
 
 public class CharacterDemo {
     public static void main(String[] args) {
@@ -24,5 +23,6 @@ public class CharacterDemo {
         System.out.println(Character.getType('９'));  // 中文全角
         System.out.println(Character.isDigit('９'));
         System.out.println(new String(Character.toChars(ma)));
+        System.out.println(Character.getNumericValue('A'));
     }
 }
