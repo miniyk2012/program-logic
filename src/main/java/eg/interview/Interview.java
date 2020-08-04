@@ -1,4 +1,4 @@
-package eg;
+package eg.interview;
 
 public class Interview {
     private static int START_BABY = 2;

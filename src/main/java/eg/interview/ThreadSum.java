@@ -1,4 +1,4 @@
-package eg;
+package eg.interview;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
