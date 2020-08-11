@@ -49,7 +49,10 @@ public class DynamicArray<E> {
 	        add(c.get(i));
 	    }
 	}
-	
+
+	public Object[] toArray() {
+		return Arrays.copyOf(elementData, size);
+	}
 
 	/**
 	 * @param args
@@ -59,7 +62,13 @@ public class DynamicArray<E> {
 		DynamicArray<Integer> ints = new DynamicArray<>();
 		ints.add(100);
 		ints.add(34);
+		DynamicArray<Float> floats = new DynamicArray<>();
+		floats.add(10F);
+		floats.add(10.3F);
 		numbers.addAll(ints);
+		numbers.addAll(floats);
+		System.out.println(Arrays.toString(numbers.toArray()));
+		System.out.println(numbers.get(2));
 
 	}
 

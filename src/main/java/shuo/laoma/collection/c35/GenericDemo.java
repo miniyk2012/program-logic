@@ -31,7 +31,10 @@ public class GenericDemo {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		Pair<Float, String>pair = makePair(200.99F, "20");
+		System.out.println(pair.getFirst() + pair.getSecond());
+		Integer[] a = new Integer[]{34,3,4,233};
+		System.out.println(max(a));
 	}
 
 }
