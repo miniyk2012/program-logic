@@ -12,7 +12,8 @@ public class NumberPair<U extends Number, V extends Number> extends Pair<U, V> {
     }
     
     public static void main(String[] args){
-    	NumberPair<Integer, Double> pair = new NumberPair<>(10, 12.34);
+    	NumberPair<Integer, Float> pair = new NumberPair<>(10, 12.34F);
     	double sum = pair.sum();
+        System.out.println(sum);
     }
 }    
