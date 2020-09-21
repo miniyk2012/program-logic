@@ -1,4 +1,4 @@
-package main.java.shuo.laoma.collection.c35;
+package shuo.laoma.collection.c35;
 
 import java.util.Arrays;
 import java.util.Collections;

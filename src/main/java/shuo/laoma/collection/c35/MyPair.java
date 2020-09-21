@@ -1,4 +1,4 @@
-package main.java.shuo.laoma.collection.c35;
+package shuo.laoma.collection.c35;
 
 public class MyPair<U,V> {
     U first;

@@ -1,4 +1,4 @@
-package main.java.shuo.laoma.collection.c35;
+package shuo.laoma.collection.c35;
 
 public class MyNumberPair<U extends Number, V extends Number> extends MyPair<U, V> {
     public MyNumberPair(U first, V second) {
