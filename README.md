@@ -27,4 +27,4 @@ QQ交流群：574974775，备注"编程"
 
 微信交流群：先加老马微信 swiftma，备注"编程"
 
-所有文章列表：http://t.im/laoma
+所有文章列表：https://www.cnblogs.com/swiftma/p/5631311.html
