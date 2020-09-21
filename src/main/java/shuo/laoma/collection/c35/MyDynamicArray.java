@@ -1,6 +1,5 @@
 package shuo.laoma.collection.c35;
 
-import shuo.laoma.collection.c35.DynamicArray;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -47,7 +46,7 @@ public class MyDynamicArray<E> {
     }
 
     public <T extends E> void addAll(MyDynamicArray<T> c) {
-        for(int i=0; i<c.size(); i++){
+        for (int i = 0; i < c.size(); i++) {
             add(c.get(i));
         }
     }
@@ -68,7 +67,7 @@ public class MyDynamicArray<E> {
         }
         System.out.println(arr.get(rnd.nextInt(size)));
 
-        DynamicArray<MyPair<Integer,String>> arr2 = new DynamicArray<>();
+        DynamicArray<MyPair<Integer, String>> arr2 = new DynamicArray<>();
         arr2.add(new MyPair<>(12, "yangkai"));
         System.out.println(arr2.get(0).getFirst());
         System.out.println(arr2.get(0).getSecond());
