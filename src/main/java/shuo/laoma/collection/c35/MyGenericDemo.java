@@ -1,8 +1,8 @@
-package shuo.laoma.collection.c35;
+package main.java.shuo.laoma.collection.c35;
 
-import shuo.laoma.basic.c11.Array;
-
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class MyGenericDemo {
     public static <T> T get(T[] arr, int index) {

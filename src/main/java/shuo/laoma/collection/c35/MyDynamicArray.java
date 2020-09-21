@@ -1,4 +1,6 @@
-package shuo.laoma.collection.c35;
+package main.java.shuo.laoma.collection.c35;
+
+import shuo.laoma.collection.c35.DynamicArray;
 
 import java.util.Arrays;
 import java.util.Random;
