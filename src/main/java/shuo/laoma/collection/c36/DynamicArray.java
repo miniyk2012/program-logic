@@ -19,8 +19,9 @@ public class DynamicArray<E> {
 			return;
 		}
 		int newCapacity = oldCapacity * 2;
-		if (newCapacity < minCapacity)
+		if (newCapacity < minCapacity) {
 			newCapacity = minCapacity;
+		}
 		elementData = Arrays.copyOf(elementData, newCapacity);
 	}
 
@@ -29,7 +30,7 @@ public class DynamicArray<E> {
 		elementData[size++] = e;
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({"unchecked"})
 	public E get(int index) {
 		return (E) elementData[index];
 	}
