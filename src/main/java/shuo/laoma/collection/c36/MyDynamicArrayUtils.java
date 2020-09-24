@@ -22,13 +22,13 @@ public class MyDynamicArrayUtils {
         return -1;
     }
 
-    public static <D> void copy(MyDynamicArray<D> dest, MyDynamicArray<? extends D> src) {
+    public static <D, S extends D> void copy(MyDynamicArray<D> dest, MyDynamicArray<S> src) {
         for (int i = 0; i < src.size(); i++) {
             dest.add(src.get(i));
         }
     }
 
-    public static <T extends Comparable<T>> T max(MyDynamicArray<T> array) {
+    public static <T extends Comparable<? super T>> T max(MyDynamicArray<T> array) {
         T max = array.get(0);
         for (int i = 1; i < array.size(); i++) {
             if (max.compareTo(array.get(i)) < 0) {
@@ -37,6 +37,7 @@ public class MyDynamicArrayUtils {
         }
         return max;
     }
+
 
     public static void main(String[] args) {
         MyDynamicArray<Number> numbers = new MyDynamicArray<>();
@@ -69,5 +70,10 @@ public class MyDynamicArrayUtils {
 
         System.out.println();
         System.out.println(max(ints));
+
+        MyDynamicArray<Child> childs = new MyDynamicArray<>();
+        childs.add(new Child(100));
+        childs.add(new Child(110));
+        System.out.println(max(childs));
     }
 }

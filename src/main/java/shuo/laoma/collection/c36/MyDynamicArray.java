@@ -1,7 +1,9 @@
 package shuo.laoma.collection.c36;
 
-import com.sun.istack.internal.NotNull;
 
+import shuo.laoma.collection.c35.MyPair;
+
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class MyDynamicArray<E> {
@@ -52,7 +54,17 @@ public class MyDynamicArray<E> {
         }
     }
 
+    public void copyTo(MyDynamicArray<? super E> dest) {
+        for (int i=0; i<size; i++) {
+            dest.add(get(i));
+        }
+    }
 
+    public E[] toArray(Class<?> type){
+        Object copy = Array.newInstance(type, size);
+        System.arraycopy(elementData, 0, copy, 0, size);
+        return (E[])copy;
+    }
 
     /**
      * @param args: 命令行参数
@@ -70,6 +82,15 @@ public class MyDynamicArray<E> {
 
         for (int i = 0; i < numbers.size(); i++) {
             System.out.println(numbers.get(i));
+        }
+
+        MyDynamicArray<Integer> ints2 = new MyDynamicArray<>();
+        ints2.add(100);
+        ints2.add(34);
+        MyDynamicArray<Number> numbers2 = new MyDynamicArray<>();
+        ints2.copyTo(numbers2);
+        for (int i = 0; i < numbers2.size(); i++) {
+            System.out.println(numbers2.get(i));
         }
 
 
