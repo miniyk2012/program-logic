@@ -1,9 +1,6 @@
 package shuo.laoma.collection.c39;
 
-import java.util.Arrays;
-import java.util.Deque;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.*;
 
 public class LinkListDemo {
 
@@ -15,7 +12,18 @@ public class LinkListDemo {
 		stack.push("c");
 
 		while(stack.peek()!=null){
-		    System.out.println(stack.pop());    
+		    System.out.println(stack.pop());
+		}
+	}
+
+	public static void queue() {
+		Queue<String> queue = new LinkedList<>();
+
+		queue.offer("a");
+		queue.offer("b");
+		queue.offer("c");
+		while(queue.peek()!=null){
+			System.out.println(queue.poll());
 		}
 	}
 	
@@ -34,6 +42,12 @@ public class LinkListDemo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		List<String> list = new LinkedList<>(Arrays.asList(new String[]{"a","b","c"}));
+		queue();
+		System.out.println();
+		stack();
+		System.out.println();
+		reverse();
 	}
 
 }
