@@ -83,7 +83,6 @@ public class MyTreeMapDemo {
         map.put("a", "abstract");
         map.put("f", "final");
         map.put("c", "call");
-
         //输出：a=abstract
         System.out.println(map.firstEntry());
         //输出：f=final
