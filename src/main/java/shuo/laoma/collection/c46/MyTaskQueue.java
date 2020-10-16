@@ -42,7 +42,7 @@ public class MyTaskQueue {
     }
 
     public static void main(String[] args) {
-        Queue<MyTaskQueue.Task> tasks = new PriorityQueue<MyTaskQueue.Task>(11, new TaskComparator());
+        Queue<MyTaskQueue.Task> tasks = new PriorityQueue<>(new TaskComparator());
         tasks.offer(new MyTaskQueue.Task(20, "写日记"));
         tasks.offer(new MyTaskQueue.Task(10, "看电视"));
         tasks.offer(new MyTaskQueue.Task(100, "写代码"));
