@@ -9,7 +9,7 @@ public class MyTopK<E> {
     private PriorityQueue<E> p;
     public MyTopK(int k){
         this.k = k;
-        p = new PriorityQueue<E>();
+        p = new PriorityQueue<>();
     }
 
     public void addAll(Collection<? extends E> c){
