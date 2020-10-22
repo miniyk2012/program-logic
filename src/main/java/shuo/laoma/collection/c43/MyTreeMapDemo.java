@@ -18,6 +18,8 @@ public class MyTreeMapDemo {
         date();
         System.out.println();
         navigate();
+        System.out.println(String.format("ayngkai", null));
+
     }
 
     public static void caseInsensitive() {
@@ -76,6 +78,8 @@ public class MyTreeMapDemo {
         for(Map.Entry<String,Integer> kv : map.entrySet()){
             System.out.println(kv.getKey()+","+kv.getValue());
         }
+
+
     }
 
     public static void navigate() {
