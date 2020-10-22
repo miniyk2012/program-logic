@@ -12,7 +12,7 @@ public class TreeSetDemo {
 		set.addAll(Arrays.asList(new String[]{
 		    "c", "a", "b", "d","f"    
 		}));
-
+		System.out.println(Arrays.toString(set.toArray()));
 		System.out.println(set.first()); //a
 		System.out.println(set.last()); //f
 		System.out.println(set.headSet("b"));//[a]
@@ -43,7 +43,7 @@ public class TreeSetDemo {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		basic();
 	}
 
 }
