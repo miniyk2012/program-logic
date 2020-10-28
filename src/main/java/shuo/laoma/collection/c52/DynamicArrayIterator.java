@@ -3,18 +3,18 @@ package shuo.laoma.collection.c52;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class DynamicArrayIterator <E>  implements Iterator<E>{
+public class DynamicArrayIterator<E> implements Iterator<E> {
     DynamicArray<E> darr;
-    int cursor;      
+    int cursor;
     int lastRet = -1;
-    
-    public DynamicArrayIterator(DynamicArray<E> darr){
+
+    public DynamicArrayIterator(DynamicArray<E> darr) {
         this.darr = darr;
     }
-    
+
     @Override
     public boolean hasNext() {
-         return cursor != darr.size();
+        return cursor != darr.size();
     }
 
     @Override
@@ -29,7 +29,7 @@ public class DynamicArrayIterator <E>  implements Iterator<E>{
 
     @Override
     public void remove() {
-        if (lastRet < 0)
+        if (lastRet < 0)  // 要next()后, 才能remove()
             throw new IllegalStateException();
         darr.remove(lastRet);
         cursor = lastRet;

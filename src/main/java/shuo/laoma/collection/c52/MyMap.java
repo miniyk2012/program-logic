@@ -50,4 +50,13 @@ public class MyMap<K, V> extends AbstractMap<K, V> {
             return darr.size();
         }
     }
+
+    public static void main(String[] args) {
+        MyMap<String, Integer> myMap = new MyMap<>();
+        myMap.put("100", 100);
+        myMap.put("100", 1020);
+        myMap.put("101", 1020);
+
+        System.out.println(myMap);
+    }
 }
