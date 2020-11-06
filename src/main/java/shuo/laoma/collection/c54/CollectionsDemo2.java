@@ -57,7 +57,7 @@ public class CollectionsDemo2 {
 
         List<String> list2= new ArrayList<>();
         Collections.addAll(list2, "a", "b", "c", "d", "b");
-        list2.removeAll(Collections.singleton("b")); //删除所有的b, 而不是只有第一条
+        list2.removeAll(Collections.singleton("b")); // 小技巧: 删除所有的b, 而不是只有第一条
         System.out.println(list2);
 
         //将Map接口转换为Set接口
