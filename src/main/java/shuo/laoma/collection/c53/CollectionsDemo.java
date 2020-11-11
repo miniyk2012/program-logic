@@ -32,6 +32,7 @@ public class CollectionsDemo {
 
 
         List<String> empty = Collections.emptyList();
-        empty.get(0);
+        System.out.println(String.join(",", empty));
+        System.out.println(String.join(",", list2));
     }
 }
