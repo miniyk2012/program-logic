@@ -33,5 +33,12 @@
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.4" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains:annotations:17.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.jonas.asm:asm:3.1" level="project" />
+    <orderEntry type="library" name="Maven: org.jacoco:org.jacoco.core:0.8.6" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm:8.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm-commons:8.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm-analysis:8.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm-tree:8.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.jacoco:org.jacoco.report:0.8.6" level="project" />
   </component>
 </module>
