@@ -35,7 +35,6 @@ public class EnumMapDemo {
 		});
 		System.out.println(countBySize(clothes));
 
-
 	}
 
 }

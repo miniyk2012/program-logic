@@ -79,7 +79,11 @@ public class WorkerDemo {
 		        new Worker("王五", EnumSet.of(
 		                Day.TUESDAY, Day.THURSDAY)),
 		};
-
+		daysNoOneWillCome(workers);
+		daysAtLeastOneWillCome(workers);
+		daysEveryoneWillCome(workers);
+		availableOnMondayAndTuesday(workers);
+		daysAtLeastHavingTwoWorkers(workers);
 	}
 
 }
