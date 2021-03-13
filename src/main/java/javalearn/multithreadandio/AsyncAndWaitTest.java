@@ -8,6 +8,7 @@ public class AsyncAndWaitTest {
         System.out.println(Thread.currentThread().getName() + "主线程结束");
         Thread.sleep(4000);
     }
+
     private static class Worker implements Runnable {
 
         public void begin() {
