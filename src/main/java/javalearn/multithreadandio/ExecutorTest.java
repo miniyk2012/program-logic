@@ -1,13 +1,20 @@
 package javalearn.multithreadandio;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-
+/*
+    线程池继承体系: https://www.yuque.com/books/share/2b434c74-ed3a-470e-b148-b4c94ba14535/ryn3lf
+ */
 public class ExecutorTest {
-    public static void main(String[] args) throws InterruptedException, ExecutionException {
+    @Test
+    public void basicUsage() throws InterruptedException, ExecutionException {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
+        // Executors$FinalizableDelegatedExecutorService, 是个代理, 内部包裹了ThreadPoolExecutor
+        System.out.println("executorService is: " + executorService.getClass());
         Future<String> result = executorService.submit(() -> {
             System.out.println(Thread.currentThread().getName() + "开始执行");
             Thread.sleep(3000);
